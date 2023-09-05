@@ -1,0 +1,54 @@
+﻿<NavigationWindow x:Class="WPF_laba_25.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_laba_25"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <NavigationWindow.Content>
+        <Page>
+            <Page.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="DarkTurquoise"/>
+                    <Setter Property="Foreground" Value="White" />
+                    <Setter Property="Width" Value="500"/>
+                    <Setter Property="Height" Value="100"/>
+                    <Setter Property="FontSize" Value="18"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="Margin" Value="5 5 5 5"/>
+                </Style>
+
+                <Style TargetType="TextBlock">
+                    <Setter Property="FontSize" Value="20"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="Margin" Value="5 30 5 5"/>
+                </Style>
+            </Page.Resources>
+
+            <Grid>
+                <Grid.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="Yellow" Offset="0.0" />
+                        <GradientStop Color="Red" Offset="0.25" />
+                        <GradientStop Color="Blue" Offset="0.75" />
+                        <GradientStop Color="LimeGreen" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Grid.Background>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.2*"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="🎉🎉ПЕРВЫЙ АПП НА ВТОРОМ КУРСЕ🎉🎉"/>
+
+                <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Button Content="ЗАДАНИЕ 1" Click="btn_clck_1"/>
+                    <Button Content="ЗАДАНИЕ 2" Click="btn_clck_2"/>
+                </StackPanel>
+            </Grid>
+        </Page>
+    </NavigationWindow.Content>
+</NavigationWindow>
